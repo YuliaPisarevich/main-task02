@@ -2,11 +2,12 @@ package by.epam.javatraining.pisarevich.tasks.maintask02.model.entity;
 
 import by.epam.javatraining.pisarevich.tasks.maintask02.model.entity.abstractions.Sweets;
 
+import java.util.Map;
 import java.util.Objects;
 
 public class Lollipop extends Sweets {
     private String taste;
-;
+    ;
 
     public Lollipop() {
     }
@@ -16,9 +17,10 @@ public class Lollipop extends Sweets {
         this.taste = taste;
 
     }
+
     public Lollipop(Lollipop lollipop) {
         this(lollipop.getName(), lollipop.getWeight(),
-                lollipop.getCost(),lollipop.getCalories(),lollipop.getTaste());
+                lollipop.getCost(), lollipop.getCalories(), lollipop.getTaste());
     }
 
     public String getTaste() {
@@ -31,7 +33,7 @@ public class Lollipop extends Sweets {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o){
+        if (this == o) {
             return true;
         }
         if (!(o instanceof Lollipop)) {
@@ -51,5 +53,18 @@ public class Lollipop extends Sweets {
         return super.toString() +
                 ", taste=" + getTaste() +
                 '}';
+    }
+
+    @Override
+    public boolean parseData(Map<String, String> data) {
+        boolean baseFieldsParsed = super.parseData(data);
+        if (baseFieldsParsed) {
+            boolean allKeysPresent = data.containsKey("taste");
+            if (allKeysPresent) {
+                this.taste = data.get("taste");
+                return true;
+            }
+        }
+        return false;
     }
 }

@@ -2,6 +2,7 @@ package by.epam.javatraining.pisarevich.tasks.maintask02.model.entity;
 
 import by.epam.javatraining.pisarevich.tasks.maintask02.model.entity.abstractions.Sweets;
 
+import java.util.Map;
 import java.util.Objects;
 
 public class ChocolateBar extends Sweets {
@@ -44,5 +45,18 @@ public class ChocolateBar extends Sweets {
         return super.toString() +
                 ", typeOfChocolate=" + typeOfChocolate +
                 '}';
+    }
+    @Override
+    public boolean parseData(Map<String, String> data) {
+        boolean baseFieldsParsed = super.parseData(data);
+        if (baseFieldsParsed)
+        {
+            boolean allKeysPresent = data.containsKey("typeOfChocolate");
+            if (allKeysPresent) {
+                this.typeOfChocolate = data.get("typeOfChocolate");
+                return true;
+            }
+        }
+        return false;
     }
 }

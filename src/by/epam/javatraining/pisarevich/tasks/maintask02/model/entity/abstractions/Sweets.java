@@ -2,6 +2,7 @@ package by.epam.javatraining.pisarevich.tasks.maintask02.model.entity.abstractio
 
 import by.epam.javatraining.pisarevich.tasks.maintask02.view.LogPrinter;
 
+import java.util.Map;
 import java.util.Objects;
 
 public class Sweets {
@@ -19,6 +20,7 @@ public class Sweets {
         this.cost = cost;
         this.calories = calories;
     }
+
     public Sweets(Sweets sweets) {
         this.name = sweets.name;
         this.weight = sweets.weight;
@@ -39,7 +41,7 @@ public class Sweets {
     }
 
     public void setWeight(double weight) {
-        if (weight > 0){
+        if (weight > 0) {
             this.weight = weight;
         } else {
             LogPrinter.LOG.error("Weight cannot be negative or equals 0. ");
@@ -67,14 +69,33 @@ public class Sweets {
         if (this == o) return true;
         if (!(o instanceof Sweets)) return false;
         Sweets sweets = (Sweets) o;
-        return  Double.compare(sweets.getWeight(), getWeight()) == 0 &&
+        return Double.compare(sweets.getWeight(), getWeight()) == 0 &&
                 Double.compare(sweets.getCost(), getCost()) == 0 &&
                 Double.compare(sweets.getCalories(), getCalories()) == 0 &&
                 Objects.equals(getName(), sweets.getName());
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(getName(), getWeight(), getCost(), getCalories());
+    }
+
+    //TODO own exception for parser
+
+    public boolean parseData(Map<String, String> data) {
+        boolean allKeysPresent = data.containsKey("name") && data.containsKey("weight") && data.containsKey("cost")
+                && data.containsKey("calories");
+        if (allKeysPresent) {
+            this.name = data.get("name");
+            try {
+                this.weight = Double.parseDouble(data.get("weight"));
+                this.cost = Double.parseDouble(data.get("cost"));
+                this.calories = Double.parseDouble(data.get("calories"));
+                return true;
+            } catch (NumberFormatException e) {
+                LogPrinter.printError("parseData error NumberFormatException");
+
+            }
+        }
+        return false;
     }
 }

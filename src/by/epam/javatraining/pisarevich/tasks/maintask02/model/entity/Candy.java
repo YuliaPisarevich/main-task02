@@ -2,6 +2,7 @@ package by.epam.javatraining.pisarevich.tasks.maintask02.model.entity;
 
 import by.epam.javatraining.pisarevich.tasks.maintask02.model.entity.abstractions.Sweets;
 
+import java.util.Map;
 import java.util.Objects;
 
 public class Candy extends Sweets {
@@ -43,5 +44,18 @@ public class Candy extends Sweets {
         return super.toString() +
                 ", consist=" + consist +
                 '}';
+    }
+
+    @Override
+    public boolean parseData(Map<String, String> data) {
+        boolean baseFieldsParsed = super.parseData(data);
+        if (baseFieldsParsed) {
+            boolean allKeysPresent = data.containsKey("consist");
+            if (allKeysPresent) {
+                this.consist = data.get("consist");
+                return true;
+            }
+        }
+        return false;
     }
 }

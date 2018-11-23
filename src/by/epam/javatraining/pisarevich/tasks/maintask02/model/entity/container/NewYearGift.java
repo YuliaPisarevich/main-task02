@@ -13,6 +13,7 @@ public class NewYearGift {
     public NewYearGift() {
         sweets = new ArrayList<>();
     }
+
     public NewYearGift(List<Sweets> sweets) {
         this.sweets = sweets;
     }
@@ -24,8 +25,9 @@ public class NewYearGift {
     public void setSweets(List<Sweets> sweets) {
         this.sweets = sweets;
     }
-    public void add(Sweets... sweets){
-        for (Sweets sw : sweets ) {
+
+    public void add(Sweets... sweets) {
+        for (Sweets sw : sweets) {
             this.sweets.add(sw);
         }
     }

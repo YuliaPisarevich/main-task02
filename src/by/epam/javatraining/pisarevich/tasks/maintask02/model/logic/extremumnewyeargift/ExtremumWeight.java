@@ -14,6 +14,7 @@ public class ExtremumWeight {
         }
         return minWeight;
     }
+
     public static double findMaxWeight(NewYearGift newYearGift) {
         double maxWeight = 0;
         for (Sweets sweets : newYearGift.getSweets()) {

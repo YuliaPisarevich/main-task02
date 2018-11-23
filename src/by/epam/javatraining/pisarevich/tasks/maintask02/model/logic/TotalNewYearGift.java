@@ -6,7 +6,7 @@ import by.epam.javatraining.pisarevich.tasks.maintask02.model.entity.container.N
 public class TotalNewYearGift {
     public static double calcTotalCost(NewYearGift newYearGift) {
         double total = 0;
-        for (Sweets sweets: newYearGift.getSweets()) {
+        for (Sweets sweets : newYearGift.getSweets()) {
             total += sweets.getCost();
         }
         total += newYearGift.getCost();
@@ -15,7 +15,7 @@ public class TotalNewYearGift {
 
     public static double calcTotalWeight(NewYearGift newYearGift) {
         double total = 0;
-        for (Sweets sweets: newYearGift.getSweets()) {
+        for (Sweets sweets : newYearGift.getSweets()) {
             total += sweets.getWeight();
         }
         total += newYearGift.getWeight();

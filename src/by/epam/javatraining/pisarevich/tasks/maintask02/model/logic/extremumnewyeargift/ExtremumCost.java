@@ -14,6 +14,7 @@ public class ExtremumCost {
         }
         return minCost;
     }
+
     public static double findMaxCost(NewYearGift newYearGift) {
         double maxCost = 0;
         for (Sweets sweets : newYearGift.getSweets()) {

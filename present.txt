@@ -1,0 +1,6 @@
+Candy(name:Dushes, weight:10, cost:200, calories:2, consist:nuts)
+Lollipop(name:Dushes, weight:10, cost:200, calories:2, taste:sour)
+Lollipop(name:Dushes2, weight:10, cost:200, calories:2, taste:sour)
+Candy(name:Dushes, weight:10, cost:200, calories:2, consist:nuts)
+ChocolateBar(name:Dushes2, weight:10, cost:200, calories:2, typeOfChocolate:white)
+Candy(name:Dushes, weight:10, cost:200, calories:2, consist:nuts)
