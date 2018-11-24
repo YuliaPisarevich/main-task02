@@ -1,4 +1,4 @@
-package by.epam.javatraining.pisarevich.tasks.maintask02.util.exception;
+package by.epam.javatraining.pisarevich.tasks.maintask02.util.exception.ParserFileException;
 
 
 public class WrongKeyReadInputException extends ParserException {

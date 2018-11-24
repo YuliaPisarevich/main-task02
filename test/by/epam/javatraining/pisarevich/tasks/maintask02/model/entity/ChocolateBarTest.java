@@ -7,10 +7,10 @@ import static org.junit.Assert.*;
 
 public class ChocolateBarTest {
 
-    ChocolateBar chocolateBar;
+    private ChocolateBar chocolateBar;
 
     @Before
-    public void initTest() {
+    public void init() {
         chocolateBar = new ChocolateBar("Choch", 100.0, 110.0,
                 10.0, "white");
     }

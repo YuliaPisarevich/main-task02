@@ -9,7 +9,7 @@ public class TotalNewYearGift {
         for (Sweets sweets : newYearGift.getSweets()) {
             total += sweets.getCost();
         }
-        total += newYearGift.getCost();
+        total += newYearGift.getCostBox();
         return total;
     }
 
@@ -18,7 +18,7 @@ public class TotalNewYearGift {
         for (Sweets sweets : newYearGift.getSweets()) {
             total += sweets.getWeight();
         }
-        total += newYearGift.getWeight();
+        total += newYearGift.getWeightBox();
         return total;
     }
 }

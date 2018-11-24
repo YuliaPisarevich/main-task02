@@ -1,10 +1,8 @@
 package by.epam.javatraining.pisarevich.tasks.maintask02.controller;
 
-import by.epam.javatraining.pisarevich.tasks.maintask02.model.entity.Candy;
-import by.epam.javatraining.pisarevich.tasks.maintask02.model.entity.ChocolateBar;
-import by.epam.javatraining.pisarevich.tasks.maintask02.model.entity.Lollipop;
 import by.epam.javatraining.pisarevich.tasks.maintask02.model.entity.abstractions.Sweets;
-import by.epam.javatraining.pisarevich.tasks.maintask02.util.Parser;
+import by.epam.javatraining.pisarevich.tasks.maintask02.model.entity.container.NewYearGift;
+import by.epam.javatraining.pisarevich.tasks.maintask02.util.ParserFile;
 
 import java.util.List;
 
@@ -19,7 +17,11 @@ public class Main {
 
         //not done yet :(
 
-        List<Sweets> sweetsList = Parser.readInput("present.txt");
+        List<Sweets> sweetsList = ParserFile.readInput("present.txt");
         System.out.println(sweetsList.size());
+
+
+        NewYearGift newYearGift = new NewYearGift(sweetsList);
+
     }
 }

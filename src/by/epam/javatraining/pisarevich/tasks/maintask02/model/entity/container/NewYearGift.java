@@ -7,8 +7,8 @@ import java.util.List;
 
 public class NewYearGift {
     private List<Sweets> sweets;
-    private double cost;
-    private double weight;
+    private double costBox;
+    private double weightBox;
 
     public NewYearGift() {
         sweets = new ArrayList<>();
@@ -17,7 +17,9 @@ public class NewYearGift {
     public NewYearGift(List<Sweets> sweets) {
         this.sweets = sweets;
     }
-
+    public NewYearGift(NewYearGift newYearGift){
+        this(newYearGift.getSweets());
+    }
     public List<Sweets> getSweets() {
         return sweets;
     }
@@ -32,20 +34,20 @@ public class NewYearGift {
         }
     }
 
-    public double getCost() {
-        return cost;
+    public double getCostBox() {
+        return costBox;
     }
 
-    public void setCost(double cost) {
-        this.cost = cost;
+    public void setCostBox(double costBox) {
+        this.costBox = costBox;
     }
 
-    public double getWeight() {
-        return weight;
+    public double getWeightBox() {
+        return weightBox;
     }
 
-    public void setWeight(double weight) {
-        this.weight = weight;
+    public void setWeightBox(double weightBox) {
+        this.weightBox = weightBox;
     }
 
     @Override

@@ -5,8 +5,8 @@ import by.epam.javatraining.pisarevich.tasks.maintask02.model.entity.Candy;
 import by.epam.javatraining.pisarevich.tasks.maintask02.model.entity.ChocolateBar;
 import by.epam.javatraining.pisarevich.tasks.maintask02.model.entity.Lollipop;
 import by.epam.javatraining.pisarevich.tasks.maintask02.model.entity.abstractions.Sweets;
-import by.epam.javatraining.pisarevich.tasks.maintask02.util.exception.WrongDataParseFieldException;
-import by.epam.javatraining.pisarevich.tasks.maintask02.util.exception.WrongKeyReadInputException;
+import by.epam.javatraining.pisarevich.tasks.maintask02.util.exception.ParserFileException.WrongDataParseFieldException;
+import by.epam.javatraining.pisarevich.tasks.maintask02.util.exception.ParserFileException.WrongKeyReadInputException;
 import by.epam.javatraining.pisarevich.tasks.maintask02.view.LogPrinter;
 
 import java.io.*;
@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 
 
-public class Parser {
+public class ParserFile {
 
     public static List<Sweets> readInput(String fileName) {
         List<Sweets> sweetsList = new ArrayList<Sweets>();
@@ -48,7 +48,7 @@ public class Parser {
                 }
 
 
-                if (sweets != null && fields != null && sweets.parseData(fields)) {
+                if (sweets != null && fields != null ) {
                     sweetsList.add(sweets);
                 }
 
@@ -62,7 +62,7 @@ public class Parser {
     }
 
     private static Sweets keySwitchSweets(String sweetsType) throws WrongKeyReadInputException{
-        Sweets sweets = null;
+        Sweets sweets;
         switch (sweetsType) {
             case "Candy":
                 sweets = new Candy(); break;

@@ -79,7 +79,6 @@ public class Sweets {
         return Objects.hash(getName(), getWeight(), getCost(), getCalories());
     }
 
-    //TODO own exception for parser
 
     public boolean parseData(Map<String, String> data) {
         boolean allKeysPresent = data.containsKey("name") && data.containsKey("weight") && data.containsKey("cost")

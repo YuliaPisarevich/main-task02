@@ -7,10 +7,10 @@ import static org.junit.Assert.*;
 
 public class LollipopTest {
 
-    Lollipop lollipop;
+    private Lollipop lollipop;
 
     @Before
-    public void initTest() {
+    public void init() {
         lollipop = new Lollipop("Loli", 10.0, 1.0, 2.0, "apple");
 
     }

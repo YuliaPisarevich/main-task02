@@ -24,8 +24,8 @@ public class TotalNewYearGiftTest {
         newYearGift.add(lollipop);
         newYearGift.add(chocolateBar);
 
-        newYearGift.setCost(2.0);
-        newYearGift.setWeight(0.5);
+        newYearGift.setCostBox(2.0);
+        newYearGift.setWeightBox(0.5);
     }
     @Test
     public void calcTotalCostTest(){
