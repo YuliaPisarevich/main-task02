@@ -17,6 +17,14 @@ public class Candy extends Sweets {
         this.consist = consist;
     }
 
+
+public Candy(Candy anotherCandy) {
+    this(anotherCandy.getName(), anotherCandy.getWeight(), anotherCandy.getCost(),
+            anotherCandy.getCalories(),anotherCandy.getConsist());
+}
+
+
+
     public String getConsist() {
         return consist;
     }

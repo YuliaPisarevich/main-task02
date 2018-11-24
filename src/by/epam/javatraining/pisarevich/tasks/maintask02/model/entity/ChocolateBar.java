@@ -16,6 +16,13 @@ public class ChocolateBar extends Sweets {
         this.typeOfChocolate = typeOfChocolate;
 
     }
+    public ChocolateBar(ChocolateBar anotherChocolateBar){
+
+        this(anotherChocolateBar.getName(), anotherChocolateBar.getWeight(),
+                anotherChocolateBar.getCost(), anotherChocolateBar.getCalories(),
+                   anotherChocolateBar.getTypeOfChocolate());
+    }
+
 
     public String getTypeOfChocolate() {
         return typeOfChocolate;

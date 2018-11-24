@@ -18,9 +18,9 @@ public class Lollipop extends Sweets {
 
     }
 
-    public Lollipop(Lollipop lollipop) {
-        this(lollipop.getName(), lollipop.getWeight(),
-                lollipop.getCost(), lollipop.getCalories(), lollipop.getTaste());
+    public Lollipop(Lollipop anotherLollipop) {
+        this(anotherLollipop.getName(), anotherLollipop.getWeight(),
+                anotherLollipop.getCost(), anotherLollipop.getCalories(), anotherLollipop.getTaste());
     }
 
     public String getTaste() {

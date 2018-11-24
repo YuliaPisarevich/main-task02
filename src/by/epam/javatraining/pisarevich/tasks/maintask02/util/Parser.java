@@ -60,7 +60,7 @@ public class Parser {
     }
     //TODO доделать через  MAP
     static private HashMap<String, String> parseFields(String fieldsStr) throws Exception {
-        HashMap<String, String> fields = new HashMap<String, String>();
+        HashMap<String, String> fields = new HashMap<>();
         String[] pairs = fieldsStr.split(", ");
         for (String s : pairs) {
             String[] keyValue = s.split(":");
