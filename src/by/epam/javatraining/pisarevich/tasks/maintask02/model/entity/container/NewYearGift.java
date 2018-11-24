@@ -25,6 +25,8 @@ public class NewYearGift {
     }
 
     public void setSweets(List<Sweets> sweets) {
+        ArrayList sweetsArray = (ArrayList) sweets;
+
         this.sweets = sweets;
     }
 

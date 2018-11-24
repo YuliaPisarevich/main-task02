@@ -1,4 +1,4 @@
-package by.epam.javatraining.pisarevich.tasks.maintask02.util.exception.ParserFileException;
+package by.epam.javatraining.pisarevich.tasks.maintask02.util.exception.ParserFileException.wrongdataparserexception;
 
 public class ParserException extends Exception {
 

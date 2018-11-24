@@ -22,6 +22,7 @@ public class Main {
 
 
         NewYearGift newYearGift = new NewYearGift(sweetsList);
+        System.out.println(newYearGift.getSweets());
 
     }
 }

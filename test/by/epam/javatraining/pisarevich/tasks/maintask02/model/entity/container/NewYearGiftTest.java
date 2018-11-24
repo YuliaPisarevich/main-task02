@@ -17,27 +17,5 @@ public class NewYearGiftTest {
 
     }
 
-    @Test
-    public void setSweets() {
-    }
 
-    @Test
-    public void add() {
-    }
-
-    @Test
-    public void getCostBox() {
-    }
-
-    @Test
-    public void setCostBox() {
-    }
-
-    @Test
-    public void getWeightBox() {
-    }
-
-    @Test
-    public void setWeightBox() {
-    }
 }

@@ -5,8 +5,8 @@ import by.epam.javatraining.pisarevich.tasks.maintask02.model.entity.Candy;
 import by.epam.javatraining.pisarevich.tasks.maintask02.model.entity.ChocolateBar;
 import by.epam.javatraining.pisarevich.tasks.maintask02.model.entity.Lollipop;
 import by.epam.javatraining.pisarevich.tasks.maintask02.model.entity.abstractions.Sweets;
-import by.epam.javatraining.pisarevich.tasks.maintask02.util.exception.ParserFileException.WrongDataParseFieldException;
-import by.epam.javatraining.pisarevich.tasks.maintask02.util.exception.ParserFileException.WrongKeyReadInputException;
+import by.epam.javatraining.pisarevich.tasks.maintask02.util.exception.ParserFileException.wrongdataparserexception.WrongDataParseFieldException;
+import by.epam.javatraining.pisarevich.tasks.maintask02.util.exception.ParserFileException.wrongdataparserexception.WrongKeyReadInputException;
 import by.epam.javatraining.pisarevich.tasks.maintask02.view.LogPrinter;
 
 import java.io.*;
@@ -54,7 +54,7 @@ public class ParserFile {
 
             }
         } catch (IOException e) {
-            LogPrinter.printError("File " + fileName);
+            LogPrinter.printError("FileNotFound " + fileName);
             System.exit(0);
         }
 
